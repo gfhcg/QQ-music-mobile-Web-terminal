@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.header0 {
+    width: 100%;
+    height: 1.4rem;
+    display: flex;
+    background-color: #fff;
+
+}
+
+.header0 svg {
+    width: 0.6rem;
+    position: relative;
+    top: 0.3rem;
+    left: 0.4rem;
+}
+
+.header0 .title {
+    height: 0.3rem;
+    position: relative;
+    top: 0.2rem;
+    left: 0.6rem;
+    font-size: 0.33rem;
+
+}
+
+.header0 .subtitle {
+    height: 0.3rem;
+    float: left;
+    color: #909090;
+    position: relative;
+    top: 0.74rem;
+    left: -0.7rem;
+    font-size: 0.24rem;
+    font-weight: 300;
+}
+
+.header0 .download {
+    width: 1.8rem;
+    height: 0.48rem;
+    display: block;
+    float: right;
+    border: 0.02rem solid #dddddd;
+    position: relative;
+    right: -1.7rem;
+    top: 0.3rem;
+    border-radius: 0.4rem;
+    font-size: 0.26rem;
+    text-align: center;
+    line-height: 0.48rem;
+    font-weight: 300;
+}
+
+.header0 .download a {
+    text-decoration: none;
+    color: #575656;
+}
+
+.header1 {
+    width: 100%;
+    height: 1rem;
+    margin-top: -0.38rem;
+    background-color: #fff;
+}
+
+.header1 li {
+    height: 0.7rem;
+    float: left;
+    list-style: none;
+    margin-left: 2rem;
+    margin-top: 0.3rem;
+    font-size: 0.32rem;
+    color: #b1b1b1;
+    font-weight: 300;
+}
+
+.header1 .rec {
+    position: relative;
+    left: -0.5rem;
+}
+
+.header1 .ranklist {
+    position: relative;
+    left: 0.7rem;
+}
+
+.header1 li .libottom {
+    height: 0.07rem;
+    width: 0.45rem;
+    background-color: #22d59c;
+    border-radius: 0.1rem;
+    position: relative;
+    margin-top: 0.2rem;
+    margin-left: 0.11rem;
+}
+
+.box {
+    width: 100%;
+    height: 20rem;
+    background-color: #fafafa;
+}
+
+.search input {
+    width: 340px;
+    height: 30px;
+    position: relative;
+    left: 18px;
+    top: 15px;
+    border-radius: 15px;
+    border: none;
+    background: url(搜索.png) no-repeat 130px center;
+    background-size: 25px;
+    border: 0.5px solid #d3d3d3;
+}
+
+input::-webkit-input-placeholder {
+    /* placeholder颜色  */
+    color: #8c8c8c;
+    /* placeholder字体大小  */
+    font-size: 0.29rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition-delay: 99999s;
+    transition: color 99999s ease-out, background-color 99999s ease-out;
+    -webkit-transition-delay: 99999s;
+    -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+    -webkit-text-fill-color: #ffffff;
+}
+
+.osongsheet {
+    width: 100%;
+    height: 500px;
+    background-color: pink;
+    position: relative;
+    top: 30px;
+}
+
+.osongsheet .otitle {
+    width: 90px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    background-color: green;
+    font-size: 0.4rem;
+    font-weight: 800;
+}
+
+.more {
+    width: 70px;
+    height: 25px;
+    position: relative;
+    left: 325px;
+    top: -20px;
+    background-color: #fff;
+    color: #8c9eb6;
+    font-weight: 300;
+    font-size: 0.27rem;
+    line-height: 25px;
+}
+
+.more a {
+    color: #8c9eb6;
+    font-weight: 300;
+    font-size: 0.27rem;
+}
+
+.more svg {
+    float: right;
+    margin-right: 30px;
+    margin-top: -3px;
+    width: 13px;
+}
+
+.osongsheet .page1 {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-color: red;
+}
+
+.osongsheet .page1 li {
+    float: left;
+    width: 110px;
+    height: 134px;
+    background-color: blue;
+    list-style: none;
+    margin-left: 5px;
+}
+
+.ssongsheet {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(0, 200, 255);
+    position: relative;
+    top: 80px;
+}
+
+.ssongsheet .stitle {
+    width: 90px;
+    position: relative;
+    top: 5px;
+    left: 10px;
+    background-color: green;
+    font-size: 0.4rem;
+    font-weight: 800;
+}
+
+
+.rank {
+    display: none;
+
+}
