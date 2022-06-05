@@ -7,6 +7,10 @@
 
 }
 
+html body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
 }
@@ -103,25 +107,127 @@ a {
     position: relative;
     margin-top: 0.2rem;
     margin-left: 0.11rem;
+    display: none;
 }
 
 .box {
     width: 100%;
-    height: 20rem;
+    height: 14rem;
+    background-color: #fafafa;
+}
+
+.search {
     background-color: #fafafa;
 }
 
 .search input {
-    width: 340px;
-    height: 30px;
+    width: 6.8rem;
+    height: 0.6rem;
     position: relative;
-    left: 18px;
-    top: 15px;
-    border-radius: 15px;
+    left: 0.36rem;
+    top: 0.3rem;
+    border-radius: 0.3rem;
     border: none;
-    background: url(搜索.png) no-repeat 130px center;
-    background-size: 25px;
-    border: 0.5px solid #d3d3d3;
+    background: url(搜索.png) no-repeat 2.6rem center;
+    background-size: 0.5rem;
+    border: 0.01rem solid #d3d3d3;
+    text-indent: 0.6rem;
+}
+
+.scontent {
+    width: 100%;
+    height: 12rem;
+    background-color: #fafafa;
+    position: relative;
+    top: 0.6rem;
+    display: none;
+
+}
+
+.history {
+    height: 4rem;
+    /* display: none; */
+    overflow: hidden;
+}
+
+.history span {
+    width: 1.8rem;
+    position: relative;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fafafa;
+    font-size: 0.35rem;
+    font-weight: 800;
+}
+
+.history svg {
+    position: absolute;
+    right: 0.4rem;
+    top: 0.16rem;
+}
+
+.history ul li {
+    height: 0.4rem;
+    list-style: none;
+    background-color: #fff;
+    margin-left: 0.1rem;
+    margin-top: 0.2rem;
+    float: left;
+    border-radius: 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    color: #555855;
+}
+
+.hot span {
+    width: 1.8rem;
+    position: relative;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fafafa;
+    font-size: 0.35rem;
+    font-weight: 800;
+}
+
+.hot ul {
+    margin-top: 0.2rem;
+}
+
+.hot li {
+    height: 0.4rem;
+    list-style: none;
+    background-color: #fff;
+    margin-left: 0.1rem;
+    margin-top: 0.2rem;
+    float: left;
+    border-radius: 0.3rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    color: #555855;
+}
+
+.result {
+    width: 7.2rem;
+    height: 10rem;
+    position: relative;
+    top: 0.4rem;
+    display: none;
+}
+
+.result li {
+    list-style: none;
+    width: 100%;
+    height: 1rem;
+    background-color: #fafafa;
+    padding-left: 0.3rem;
+}
+
+.result li :hover {
+    background-color: #dadada;
+}
+
+#search.change::placeholder {
+    text-align: left;
 }
 
 input::-webkit-input-placeholder {
@@ -146,33 +252,33 @@ input:-webkit-autofill:active {
 
 .osongsheet {
     width: 100%;
-    height: 500px;
-    background-color: pink;
+    height: 4.3rem;
+    background-color: #fafafa;
     position: relative;
-    top: 30px;
+    top: 0.6rem;
 }
 
 .osongsheet .otitle {
-    width: 90px;
+    width: 1.8rem;
     position: relative;
-    top: 5px;
-    left: 10px;
-    background-color: green;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fafafa;
     font-size: 0.4rem;
     font-weight: 800;
 }
 
 .more {
-    width: 70px;
-    height: 25px;
+    width: 1.4rem;
+    height: 0.5rem;
     position: relative;
-    left: 325px;
-    top: -20px;
-    background-color: #fff;
-    color: #8c9eb6;
+    left: 6.1rem;
+    top: -0.4rem;
+    background-color: #fafafa;
+    color: #8a8a8a;
     font-weight: 300;
     font-size: 0.27rem;
-    line-height: 25px;
+    line-height: 0.5rem;
 }
 
 .more a {
@@ -183,47 +289,354 @@ input:-webkit-autofill:active {
 
 .more svg {
     float: right;
-    margin-right: 30px;
-    margin-top: -3px;
-    width: 13px;
+    margin-right: 0.6rem;
+    margin-top: -0.06rem;
+    width: 0.26rem;
 }
 
-.osongsheet .page1 {
-    height: 300px;
+.box1 {
     width: 100%;
+    height: 3.2rem;
     overflow: hidden;
-    background-color: red;
+    /* 超出隐藏滚动条 */
+    background-color: #fafafa;
 }
 
-.osongsheet .page1 li {
-    float: left;
-    width: 110px;
-    height: 134px;
-    background-color: blue;
+.box1 .wrap {
+    width: 100%;
+    /* 和父盒子宽度一样 */
+    height: 3.52rem;
+    /* 比里层元素高16px 为了隐藏滚动条*/
+    overflow-x: scroll;
+    /* 定义超出此盒子滚动 */
+    overflow-y: hidden;
+}
+
+.wrap ul {
+    width: 15.1rem;
+    display: flex;
+}
+
+.wrap ul li {
     list-style: none;
-    margin-left: 5px;
+    width: 2.4rem;
+    height: 3.2;
+    background-color: #fafafa;
+    margin-left: 0.1rem;
+    text-align: center;
+}
+
+.box1 .wrap img {
+    width: 2.4rem;
+    height: 2.6rem;
+    border-radius: 0.3rem;
+}
+
+.box1 .wrap svg {
+    width: 0.3rem;
+    position: relative;
+    top: -1rem;
+    z-index: 99;
+    left: 0rem;
+
+}
+
+.playcount {
+    width: 1.2rem;
+    height: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -1.6rem;
+    left: 0.94rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    line-height: 0.4rem;
+    padding-left: 0.2rem;
+    font-weight: 300;
+    font-size: 0.25rem;
 }
 
 .ssongsheet {
     width: 100%;
-    height: 500px;
-    background-color: rgb(0, 200, 255);
+    height: 4.3rem;
+    background-color: #fafafa;
     position: relative;
-    top: 80px;
+    top: 1rem;
 }
 
 .ssongsheet .stitle {
-    width: 90px;
+    width: 1.8rem;
     position: relative;
-    top: 5px;
-    left: 10px;
-    background-color: green;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fafafa;
     font-size: 0.4rem;
     font-weight: 800;
 }
 
+.box2 {
+    width: 100%;
+    height: 3.2rem;
+    overflow: hidden;
+    /* 超出隐藏滚动条 */
+    background-color: #fafafa;
+}
+
+.box2 .wrap {
+    width: 100%;
+    /* 和父盒子宽度一样 */
+    height: 3.52rem;
+    /* 比里层元素高16px 为了隐藏滚动条*/
+    overflow-x: scroll;
+    /* 定义超出此盒子滚动 */
+    overflow-y: hidden;
+}
+
+.box2 .wrap img {
+    width: 2.4rem;
+    height: 2.6rem;
+    border-radius: 0.3rem;
+}
+
+.box2 .wrap svg {
+    width: 0.26rem;
+    position: relative;
+    top: -1rem;
+    z-index: 99;
+    left: 0rem;
+
+}
+
+.playcount2 {
+    width: 1.2rem;
+    height: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -1.6rem;
+    left: 0.94rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    line-height: 0.4rem;
+    padding-left: 0.2rem;
+    font-weight: 300;
+    font-size: 0.25rem;
+}
+
+.area {
+    width: 100%;
+    height: 4.3rem;
+    background-color: #fafafa;
+    position: relative;
+    top: 1.2rem;
+}
+
+.area .atitle {
+    width: 1.8rem;
+    position: relative;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fafafa;
+    font-size: 0.4rem;
+    font-weight: 800;
+}
+
+.box3 {
+    width: 100%;
+    height: 3.2rem;
+    overflow: hidden;
+    /* 超出隐藏滚动条 */
+    background-color: #fafafa;
+}
+
+.box3 .wrap1 {
+    width: 100%;
+    /* 和父盒子宽度一样 */
+    height: 3.52rem;
+    /* 比里层元素高16px 为了隐藏滚动条*/
+    overflow-x: scroll;
+    /* 定义超出此盒子滚动 */
+    overflow-y: hidden;
+}
+
+.wrap1 ul {
+    width: 40rem;
+    display: flex;
+}
+
+.wrap1 ul li {
+    list-style: none;
+    width: 4.6rem;
+    height: 3rem;
+    background-color: #fafafa;
+    margin-left: 0.1rem;
+}
+
+#zhuanqv {
+    width: 4.6rem;
+    height: 2.4rem;
+    border-radius: 0.3rem;
+}
+
+#icon {
+    width: 0.7rem;
+    height: 0.7rem;
+    z-index: 999;
+    position: relative;
+    left: 0.1rem;
+    top: -0.8rem;
+
+}
+
+.biaoti {
+    position: relative;
+    left: 0.9rem;
+    top: -1.4rem;
+    color: #fff;
+}
+
+.describ {
+    position: relative;
+    left: 0rem;
+    top: -1.2rem;
+    color: #585858;
+}
 
 .rank {
+    width: 100%;
+    height: 35.4rem;
+    background-color: #fafafa;
     display: none;
+}
 
+.rank .rtitle {
+    width: 1.8rem;
+    position: relative;
+    top: 0.1rem;
+    left: 0.2rem;
+    background-color: #fff;
+    font-size: 0.4rem;
+    font-weight: 800;
+
+}
+
+.rank .top3 {
+    position: relative;
+    top: 0.3rem;
+}
+
+.rank li {
+    width: 7rem;
+    height: 2.6rem;
+    background-color: #fff;
+    margin-top: 1rem;
+    margin-left: 0.25rem;
+    list-style: none;
+    border-radius: 0.2rem;
+}
+
+#facepage {
+    width: 2.6rem;
+    height: 2.6rem;
+    position: relative;
+    left: 4.4rem;
+    top: -2.04rem;
+    border-radius: 0rem 0.3rem 0.3rem 0rem;
+}
+
+.rank .top3 li {
+    width: 4rem;
+    height: 0.4rem;
+    background-color: #fff;
+    margin-top: 0.1rem;
+    margin-left: 0.2rem;
+    list-style: none;
+    line-height: 0.4rem;
+    border-radius: 0rem;
+    font-weight: 300;
+    font-size: 0.25rem;
+    overflow: hidden;
+    color: #555855;
+}
+
+.playcount3 {
+    width: 0.9rem;
+    height: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: -2.94rem;
+    left: 5.6rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    line-height: 0.4rem;
+    padding-left: 0.5rem;
+    font-weight: 300;
+    font-size: 0.25rem;
+}
+
+.update {
+    width: 1.2rem;
+    height: 0.4rem;
+    position: relative;
+    top: -4.6rem;
+    left: 5.8rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    line-height: 0.4rem;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.25rem;
+}
+
+.rank svg {
+    width: 0.26rem;
+    position: relative;
+    top: -1.96rem;
+    left: 3.1rem;
+    z-index: 99;
+}
+
+.down {
+
+    width: 100%;
+    height: 3.8rem;
+    background-color: #fafafa;
+}
+
+.down .logo svg {
+    position: relative;
+    left: 2.8rem;
+    width: 2rem;
+}
+
+.down p {
+    font-weight: 300;
+    color: #1a1a1a;
+    font-size: 0.25rem;
+    text-align: center;
+    position: relative;
+    top: -0.6rem;
+}
+
+.down .download2 {
+    position: relative;
+    left: 1.2rem;
+    top: 0rem;
+    width: 4.6rem;
+    height: 0.9rem;
+    background-color: #fff;
+    border-radius: 0.6rem;
+    line-height: 0.9rem;
+    padding-left: 0.4rem;
+
+}
+
+.down .download2 svg {
+    position: relative;
+    top: 0.1rem;
+    left: -0.1rem;
+}
+
+.down .download2 a {
+    color: #454545;
+    font-weight: 300;
 }
